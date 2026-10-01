@@ -19,12 +19,12 @@ Results should look like
 <img width="571" height="431" alt="image" src="https://github.com/user-attachments/assets/b8c41dc2-93ae-4b19-afe5-f2df0a074cc7" />
 
 ## Model
-The XGBoost model here reported is the one trained on the Scenario S4. The performance are measured considering the MAPE
+The XGBoost model here reported is the one trained on the Scenario S4. The performance are here repoted as MAPE
 
 | Scenario | Target                         | Train | Val  | Test |
 | -------- | ------------------------------ | ----- | ---- | ---- |
-| S4       | Π1\\Pi_1Π1​                    | 4.3%  | 4.7% | 8.6% |
-| S4       | θapp\\theta_{\\mathrm{app}}θapp​ | 3.2%  | 4.4% | 7.6% |
+| S4       | Π1                             | 4.3%  | 4.7% | 8.6% |
+| S4       | θapp                           | 3.2%  | 4.4% | 7.6% |
 
 ## References
 
