@@ -62,46 +62,6 @@ class MathieuModel:
         self.DT = float(DT)
         self.T_W = self.T_sat+self.DT
 
-    # ================================================================== #
-    #  Dimensionless groups                                              #
-    #                                                                    #
-    #  Π1 = q'_tcl / (h_lv · μ_l)                  dependent (heat-flux) #
-    #  Π2 = σ² / (h_lv · μ_l²)                     pure fluid property   #
-    #  Π3 = ρ_l² · h_lv · δ² / μ_l²                                      #
-    #  Π4 = (ρ_l · k_l · R_i / μ_l) · √h_lv        pure fluid property   #
-    #  Π5 = k_l · ΔT_w / (h_lv · μ_l)              = ξ                   #
-    #  π6 = θ_app / θ_mic                                                #
-    # ================================================================== #
-
-    def get_pi1(self, q_tcl):
-        return q_tcl / (self.h_lv * self.mu_l)
-
-    def get_pi2(self):
-        return self.sigma**2 / (self.h_lv * self.mu_l**2)
-
-    def get_pi3(self, delta):
-        return self.rho_l**2 * self.h_lv * delta**2 / self.mu_l**2
-
-    def get_pi4(self):
-        return (self.rho_l * self.k_l * self.R_i / self.mu_l) * self.h_lv**0.5
-
-    def get_pi5(self):
-        return self.k_l * self.DT / (self.h_lv * self.mu_l)
-
-    def get_pi6(self):
-        return self.theta / self.theta_mic
-
-    def get_pi_all(self, delta, q_tcl):
-        # Requires DT_def() (Π5) and simulate() (Π6, through self.theta)
-        return {
-            'pi1': self.get_pi1(q_tcl),
-            'pi2': self.get_pi2(),
-            'pi3': self.get_pi3(delta),
-            'pi4': self.get_pi4(),
-            'pi5': self.get_pi5(),
-            'pi6': self.get_pi6(),
-        }
-
     def diff_eq(self, t, x):
         [axe, d, theta, DP, q_p] = x
 
