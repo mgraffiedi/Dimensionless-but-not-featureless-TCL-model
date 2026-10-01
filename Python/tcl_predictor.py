@@ -13,10 +13,10 @@ Outputs are arrays: q_p [W/m] and theta_app [deg].
 
 Predictors (log-transformed, in this order):
     Pi2 = sigma**2/(h_lv*mu_l**2)
-    Pi3 = delta/(k_l*R_i)                  #not the Pi3 of MathieuModel.get_pi3
+    Pi3 = delta/(k_l*R_i)             
     Pi4 = rho_l*k_l*R_i/mu_l*h_lv**0.5
     Pi5 = k_l*DT/(h_lv*mu_l)
-    Pi6 = theta_mic                        #deg, not theta_app/theta_mic
+    Pi6 = theta_mic                        #deg
 Targets: Pi1 = q_p/(h_lv*mu_l) and theta_app.
 '''
 
