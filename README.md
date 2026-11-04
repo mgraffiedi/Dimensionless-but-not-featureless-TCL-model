@@ -26,5 +26,13 @@ The XGBoost model here reported is the one trained on the Scenario S4. The perfo
 | S4       | Π1                             | 4.3%  | 4.7% | 8.6% |
 | S4       | θapp                           | 3.2%  | 4.4% | 7.6% |
 
+## Troubleshooting
+numpy 2.5.4
+scipy 1.18.1
+CoolProp 7.2.0
+matplotlib 3.11.2
+pandas 2.3.3
+xgboost 3.1.0
+
 ## References
 
