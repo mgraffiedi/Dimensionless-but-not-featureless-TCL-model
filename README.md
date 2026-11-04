@@ -27,6 +27,8 @@ The XGBoost model here reported is the one trained on the Scenario S4. The perfo
 | S4       | θapp                           | 3.2%  | 4.4% | 7.6% |
 
 ## Troubleshooting
+In case of issues running the code, an effective combination of packages is the following
+
 numpy 2.5.4
 scipy 1.18.1
 CoolProp 7.2.0
